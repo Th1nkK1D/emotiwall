@@ -5,10 +5,21 @@
 </template>
 
 <style lang="scss">
+  @font-face {
+    font-family: 'Sukhumvit';
+    src: url('/fonts/SukhumvitSet-Text.ttf');
+  }
+
+  @font-face {
+    font-family: 'Sukhumvit';
+    src: url('/fonts/SukhumvitSet-Bold.ttf');
+    font-weight: bold;
+  }
+
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Sukhumvit Set';
+    font-family: 'Sukhumvit';
   }
 
   #app {
