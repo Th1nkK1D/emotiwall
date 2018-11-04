@@ -3,7 +3,7 @@
     backgroundColor: color,
     flex: width+' '+width+' 0'
   }">
-    <img :src="require('@/assets/emotions/'+type+'.png')" alt="">
+    <img :src="require('@/assets/emotions/'+type+'.gif')" alt="">
   </div>
 </template>
 
