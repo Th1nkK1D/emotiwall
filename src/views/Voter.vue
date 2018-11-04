@@ -26,7 +26,7 @@ export default {
     vote (name) {
       const date = new Date()
 
-      db.ref('votes/'+name).push({
+      db.ref('votes/' + name).push({
         timestamp: date.toLocaleString()
       })
     }

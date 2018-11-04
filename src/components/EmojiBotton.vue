@@ -13,12 +13,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @keyframes bounce {
+      0%   {transform: scale(1)}
+      50%  {transform: scale(1.2)}
+      100% {transform: scale(1)}
+  }
+
   .emoji-button {
     text-align: center;
 
     img {
       width: 30vw;
       height: auto;
+
+      &:active {
+        animation-name: bounce;
+        animation-duration: .2s;
+        transition-timing-function: ease-in-out;
+      }
     }
 
     p {

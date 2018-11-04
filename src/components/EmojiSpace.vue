@@ -20,6 +20,7 @@ export default {
     overflow: hidden;
     display: flex;
     justify-content: center;
+    transition: flex 0.8s cubic-bezier(0.64, 0.57, 0.67, 1.53);
 
     img {
       height: 15vw;
