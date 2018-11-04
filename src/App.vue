@@ -16,4 +16,13 @@
     display: flex;
     justify-content: center;
   }
+
+  .title {
+    font-size: 3vw;
+    margin: 0;
+
+    h1 {
+      letter-spacing: 0.3rem;
+    }
+  }
 </style>

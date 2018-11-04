@@ -1,5 +1,5 @@
 <template>
-  <div class="emoji">
+  <div class="emoji-button">
     <img :src="require('@/assets/emotions/'+type+'.gif')" alt="" @click="() => votefn(type)">
     <p>{{ label }}</p>
   </div>
@@ -7,13 +7,13 @@
 
 <script>
 export default {
-  name: 'Emoji',
+  name: 'EmojiBotton',
   props: ['type', 'label', 'votefn']
 }
 </script>
 
 <style lang="scss" scoped>
-  .emoji {
+  .emoji-button {
     text-align: center;
 
     img {

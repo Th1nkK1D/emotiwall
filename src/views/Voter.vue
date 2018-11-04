@@ -4,15 +4,15 @@
       <h1>รู้สึกยังไงกับการศึกษาไทย?</h1>
     </div>
     <div class="emolist">
-      <Emoji type="happy" label="สุข" :votefn="vote" />
-      <Emoji type="sad" label="เศร้า" :votefn="vote" />
-      <Emoji type="angry" label="โกรธ" :votefn="vote" />
+      <EmojiBotton type="happy" label="สุข" :votefn="vote" />
+      <EmojiBotton type="sad" label="เศร้า" :votefn="vote" />
+      <EmojiBotton type="angry" label="โกรธ" :votefn="vote" />
     </div>
   </div>
 </template>
 
 <script>
-import Emoji from '@/components/Emoji'
+import EmojiBotton from '@/components/EmojiBotton'
 import firebase from 'firebase/app'
 
 const db = firebase.database()
@@ -20,7 +20,7 @@ const db = firebase.database()
 export default {
   name: 'Voter',
   components: {
-    Emoji
+    EmojiBotton
   },
   methods: {
     vote (name) {
@@ -42,12 +42,8 @@ export default {
     margin: auto;
 
     .title {
-      font-size: 3vw;
-      margin: 0;
-
       h1 {
         margin-bottom: 0;
-        letter-spacing: 0.3rem;
       }
     }
 
@@ -57,10 +53,6 @@ export default {
       justify-content: center;
       height: 100%;
       margin-bottom: 15vh;
-
-      .emoji {
-        margin: auto 0;
-      }
     }
   }
 </style>
