@@ -40,7 +40,7 @@ export default {
   },
   firebase: {
     votes: {
-      source: db.ref('/'),
+      source: db.ref('votes'),
       isObject: false
     }
   },
