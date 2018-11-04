@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <h1>Emotiwall 1.0</h1>
+    <h1>Emotiwall Beta</h1>
 
     <h3>Page:</h3>
-    <router-link to="voter">Voter</router-link>
+    <router-link to="voter">Vote</router-link>
     <router-link to="wall">Wall</router-link>
 
     <h3>Setting:</h3>
@@ -37,7 +37,7 @@ export default {
     padding: 10vh;
     margin: auto;
     color: white;
-    background-color: black;
+    background: linear-gradient(#81C6AA, #2792BC);
 
     a {
       color: white;

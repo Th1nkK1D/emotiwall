@@ -37,6 +37,7 @@ export default {
     }
 
     p {
+      font-family: 'Sukhumvit';
       font-size: 4vw;
       margin: -3vw 0 0 0;
     }
