@@ -5,8 +5,26 @@
 </template>
 
 <script>
+import firebase from 'firebase/app'
+
+const db = firebase.database()
+
 export default {
-  name: 'Wall'
+  name: 'Wall',
+  firebase: {
+    votes: {
+      source: db.ref('/'),
+      isObject: false
+    }
+  },
+  computed: {
+    countedVotes () {
+      return this.votes.map(type => ({
+        type: type['.key'],
+        count: Object.keys(type).length - 1
+      }))
+    }
+  }
 }
 </script>
 
