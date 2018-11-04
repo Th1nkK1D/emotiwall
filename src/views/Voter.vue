@@ -4,20 +4,32 @@
       <h1>รู้สึกยังไงกับการศึกษาไทย?</h1>
     </div>
     <div class="emolist">
-      <Emoji file="happy" label="สุข" />
-      <Emoji file="sad" label="เศร้า" />
-      <Emoji file="angry" label="โกรธ" />
+      <Emoji type="happy" label="สุข" :votefn="vote" />
+      <Emoji type="sad" label="เศร้า" :votefn="vote" />
+      <Emoji type="angry" label="โกรธ" :votefn="vote" />
     </div>
   </div>
 </template>
 
 <script>
 import Emoji from '@/components/Emoji'
+import firebase from 'firebase/app'
+
+const db = firebase.database()
 
 export default {
   name: 'Voter',
   components: {
     Emoji
+  },
+  methods: {
+    vote (name) {
+      const date = new Date()
+
+      db.ref(name).push({
+        timestamp: date.toLocaleString()
+      })
+    }
   }
 }
 </script>

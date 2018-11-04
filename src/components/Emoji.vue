@@ -1,6 +1,6 @@
 <template>
   <div class="emoji">
-    <img :src="require('@/assets/emotions/'+file+'.gif')" alt="">
+    <img :src="require('@/assets/emotions/'+type+'.gif')" alt="" @click="() => votefn(type)">
     <p>{{ label }}</p>
   </div>
 </template>
@@ -8,7 +8,7 @@
 <script>
 export default {
   name: 'Emoji',
-  props: ['file', 'label']
+  props: ['type', 'label', 'votefn']
 }
 </script>
 
