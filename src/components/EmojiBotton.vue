@@ -1,8 +1,8 @@
 <template>
-  <div class="emoji-button">
+  <button class="emoji-button">
     <img :src="require('@/assets/emotions/'+type+'.gif')" alt="" @click="() => votefn(type)">
     <p>{{ label }}</p>
-  </div>
+  </button>
 </template>
 
 <script>
@@ -21,6 +21,9 @@ export default {
 
   .emoji-button {
     text-align: center;
+    background: none;
+    border: none;
+    outline: none;
 
     img {
       width: 30vw;

@@ -1,8 +1,8 @@
 <template>
   <div class="wall">
-    <div class="title">
+    <!-- <div class="title">
       <h1>รู้สึกยังไงกับการศึกษาไทย?</h1>
-    </div>
+    </div> -->
     <div class="emospaces">
       <EmojiSpace v-for="emo in countedVotes" :key="emo.type" :type="emo.type" :color="emoSetting[emo.type].color" :width="emo.count" />
     </div>
@@ -25,15 +25,15 @@ export default {
       emoSetting: {
         happy: {
           pos: 1,
-          color: 'green'
+          color: ['#81C6AA', '#2792BC']
         },
         sad: {
           pos: 2,
-          color: 'blue'
+          color: ['#55BCE6', '#8A559F']
         },
         angry: {
           pos: 3,
-          color: 'red'
+          color: ['#F9BD70', '#EF7298']
         }
       }
     }

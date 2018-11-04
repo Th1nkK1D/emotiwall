@@ -1,6 +1,6 @@
 <template>
   <div class="emoji-space" :style="{
-    backgroundColor: color,
+    backgroundImage: 'linear-gradient('+color[0]+', '+color[1]+')',
     flex: width+' '+width+' 0'
   }">
     <img :src="require('@/assets/emotions/'+type+'.gif')" alt="">
